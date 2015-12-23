@@ -1,24 +1,37 @@
 <h1>
-<a href="http://sailsjs.org"><img alt="Sails.js logo" src="http://balderdashy.github.io/sails/images/logo.png" title="Sails.js"/></a>
+Shyp's Sails Fork
 </h1>
 
-### [Website](http://sailsjs.org/)  &nbsp; [Getting Started](http://sailsjs.org/#!getStarted) &nbsp;  [Docs](http://sailsjs.org/#!documentation)  &nbsp; [Submit Issue](https://github.com/balderdashy/sails/blob/master/README.md#issue-submission)
+This is Shyp's fork of the Sails.js project. We use Sails solely as an API, and
+we're planning to remove many of the features that we don't use, for example:
 
+- Grunt
+- Blueprints
+- Socket support
+- HTML rendering
+- JSONX
+- Auto routes
+- Support for any datastore besides Postgres
 
-Sails.js is a web framework that makes it easy to build custom, enterprise-grade Node.js apps. It is designed to resemble the MVC architecture from frameworks like Ruby on Rails, but with support for the more modern, data-oriented style of web app development. It's especially good for building realtime features like chat.
+We hope this project is reliable.
 
+## Project Direction
 
-## Installation &nbsp;  [![NPM version](https://badge.fury.io/js/sails.svg)](http://badge.fury.io/js/sails)
+We'll read community error reports, issues and PR's, though it's unlikely that
+we'll have time to test and merge them.
+
+## Tests
+
+We run tests on CircleCI. Here's an image showing whether the tests pass or
+fail.
+
+<img src="https://circleci.com/gh/Shyp/sails.png" alt="Test status" />
 
 **With [node](http://nodejs.org) [installed](http://sailsjs.org/#!documentation/new-to-nodejs):**
 ```sh
 # Get the latest stable release of Sails
 $ sudo npm install sails -g
 ```
-
-> ######Upgrading from v0.9?
-> Be sure and check out the [v0.10 upgrading guide](http://sailsjs.org/#/documentation/concepts/Upgrading).
-
 
 ## Your First Sails Project
 
