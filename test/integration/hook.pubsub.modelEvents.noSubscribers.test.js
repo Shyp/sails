@@ -28,7 +28,7 @@ describe('pubsub :: ', function() {
 		describe('when no one is subscribed to user #1 and User has no watchers ', function() {
 
 			before(function(done) {
-				this.timeout(5000);
+				this.timeout(15000);
 				appHelper.buildAndLiftWithTwoSockets(appName, function(err, sails, _socket1, _socket2) {
 					if (err) {throw new Error(err);}
 					sailsprocess = sails;
@@ -66,7 +66,7 @@ describe('pubsub :: ', function() {
 			});
 
 			it('updating the user via PUT /user/1 should result in no `user` events being received', function(done) {
-				
+
 				socket2.on('user', function(message) {
 					assert(false, 'User event received by socket 2 when it should not have been!');
 				})
