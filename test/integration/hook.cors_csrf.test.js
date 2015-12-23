@@ -9,6 +9,7 @@ describe('CORS and CSRF ::', function() {
   var appName = 'testApp';
 
   beforeEach(function(done) {
+    this.timeout(20000);
     appHelper.lift({
       silly: false
     }, function(err, sails) {
@@ -32,9 +33,7 @@ describe('CORS and CSRF ::', function() {
     });
 
     after(function() {
-      // console.log('before `chdir ../`' + ', cwd was :: ' + process.cwd());
       process.chdir('../');
-      // console.log('after `chdir ../`' + ', cwd was :: ' + process.cwd());
       appHelper.teardown();
     });
 
