@@ -27,7 +27,7 @@ describe('CORS and CSRF ::', function() {
   describe('CORS config ::', function() {
 
     before(function(done) {
-      this.timeout(5000);
+      this.timeout(15000);
       appHelper.build(done);
     });
 
