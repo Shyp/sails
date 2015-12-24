@@ -889,53 +889,6 @@
         }
       }
     },
-    "socket.io": {
-      "version": "0.9.17",
-      "dependencies": {
-        "socket.io-client": {
-          "version": "0.9.16",
-          "dependencies": {
-            "uglify-js": {
-              "version": "1.2.5"
-            },
-            "ws": {
-              "version": "0.4.32",
-              "dependencies": {
-                "nan": {
-                  "version": "1.0.0"
-                },
-                "tinycolor": {
-                  "version": "0.0.1"
-                },
-                "options": {
-                  "version": "0.0.6"
-                }
-              }
-            },
-            "xmlhttprequest": {
-              "version": "1.4.2"
-            },
-            "active-x-obfuscator": {
-              "version": "0.0.1",
-              "dependencies": {
-                "zeparser": {
-                  "version": "0.0.5"
-                }
-              }
-            }
-          }
-        },
-        "policyfile": {
-          "version": "0.0.4"
-        },
-        "base64id": {
-          "version": "0.1.0"
-        },
-        "redis": {
-          "version": "0.7.3"
-        }
-      }
-    },
     "waterline": {
       "version": "1.0.1",
       "resolved": "git+https://github.com/Shyp/waterline.git#62c43160986db5547ac56093ba30c3727364a429",

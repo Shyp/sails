@@ -17,7 +17,7 @@ $ mocha test/benchmarks -v
 
 ### Goals
 
-These tests are related to benchmarking the performance of different parts of Sails.  For now, our benchmark tests should be "integration" or "acceptance" tests.  By that, I mean they should measure a specific "user action" (e.g. running `sails new`, running `sails lift`, sending an HTTP request to a dummy endpoint, connecting a Socket.io client, etc.).
+These tests are related to benchmarking the performance of different parts of Sails.  For now, our benchmark tests should be "integration" or "acceptance" tests.  By that, I mean they should measure a specific "user action" (e.g. running `sails new`, running `sails lift`, sending an HTTP request to a dummy endpoint, etc.).
 
 
 
@@ -56,10 +56,6 @@ Here are the most important things we need to benchmark:
 	+ private Sails requests via `sails.emit('request')`
 	+ http requests to the HTTP server
 	+ http file uploads to the HTTP server
-	+ connections to the socket.io server
-	+ socket emissions to the socket.io server
-	+ socket broadcasts FROM the socket.io server (pubsub hook)
-
 
 > Thankfully, the ORM is already covered by the benchmarks in Waterline core and its generic adapter tests.
 
@@ -99,4 +95,3 @@ Some important things to consider when benchmarking Node.js / Express-based apps
 + https://github.com/spumko/flod
 + https://github.com/LearnBoost/mongoose/blob/3.8.x/benchmarks/benchjs/casting.js
 + https://npmjs.org/package/benchmark
-
