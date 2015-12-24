@@ -50,10 +50,6 @@ $ cd testProject
 $ sails lift
 ```
 
-**Generate a REST API:**
-
-[![ScreenShot](http://i.imgur.com/Ii88jlhl.png)](https://www.youtube.com/watch?v=GK-tFvpIR7c)
-
 
 ## Compatibility
 
