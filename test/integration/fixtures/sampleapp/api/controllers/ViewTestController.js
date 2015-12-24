@@ -16,8 +16,4 @@ module.exports = {
     	res.view('viewtest/viewOptions', {foo:'!baz!'});
   	},
 
-  	csrf: function(req, res, next) {
-  		res.view();
-  	}
-
 };
