@@ -52,7 +52,7 @@ After all hooks have initialized, Sails exposes global variables
 > This step does not run when `sails.load()` is used programmatically.
 > To also run the initialization step, use `sails.lift()` instead.
 
-+ Start attached servers (by default: Express and Socket.io)
++ Start attached servers (by default: Express)
 + Run the bootstrap function (`sails.config.bootstrap`)
 
 
@@ -64,5 +64,3 @@ After all hooks have initialized, Sails exposes global variables
   + `lift()` === `load()` + `initialize()`.  It does everything `load()` does, plus it starts any attached servers (e.g. HTTP) and logs a picture of a boat.
 
 > If you have a question that isn't covered here, please feel free to send a PR adding it to this section (even if you don't have the answer!)
-
-

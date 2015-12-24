@@ -15,7 +15,6 @@ var exec = require('child_process').exec;
 var path = require('path');
 var sailsBin = path.resolve('./bin/sails.js');
 var spawn = require('child_process').spawn;
-var _ioClient = require('./sails.io')(require('socket.io-client'));
 var Sails = require('../../../lib/app');
 
 // Make existsSync not crash on older versions of Node
@@ -117,32 +116,5 @@ module.exports.buildAndLift = function(appName, options, callback) {
 	}
 	module.exports.build(appName, function() {
 		module.exports.lift(options, callback);
-	});
-};
-
-module.exports.liftWithTwoSockets = function(options, callback) {
-	if (typeof options == 'function') {
-		callback = options;
-		options = null;
-	}
-	module.exports.lift(options, function(err, sails) {
-		if (err) {return callback(err);}
-		var socket1 = _ioClient.connect('http://localhost:1342',{'force new connection': true});
-		socket1.on('connect', function() {
-			var socket2 = _ioClient.connect('http://localhost:1342',{'force new connection': true});
-			socket2.on('connect', function() {
-				callback(null, sails, socket1, socket2);
-			});
-		});
-	});
-};
-
-module.exports.buildAndLiftWithTwoSockets = function(appName, options, callback) {
-	if (typeof options == 'function') {
-		callback = options;
-		options = null;
-	}
-	module.exports.build(appName, function() {
-		module.exports.liftWithTwoSockets(options, callback);
 	});
 };
