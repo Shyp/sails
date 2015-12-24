@@ -50,9 +50,9 @@ describe('Request hook', function () {
       it('should add a port to baseUrl on a custom port', function() {
         this.req.protocol = 'http';
         this.req.host = 'example.org';
-        this.req.headers.Host = 'example.org:1337';
+        this.req.headers.Host = 'example.org:6789';
         mixinMetadata(this.req);
-        assert.equal(this.req.baseUrl, 'http://example.org:1337');
+        assert.equal(this.req.baseUrl, 'http://example.org:6789');
       });
 
       it('should handle running as HTTP on port 443', function() {
