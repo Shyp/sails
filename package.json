@@ -62,7 +62,7 @@
     "semver": "~2.2.1",
     "skipper": "~0.5.3",
     "socket.io": "~0.9.14",
-    "waterline": "git+https://github.com/Shyp/waterline.git#shyp-master-1.0.0"
+    "waterline": "git+https://github.com/Shyp/waterline.git#v1.0.1"
   },
   "devDependencies": {
     "benchmark": "~1.0.0",
