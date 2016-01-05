@@ -787,8 +787,8 @@
       }
     },
     "waterline": {
-      "version": "1.0.1",
-      "resolved": "git+https://github.com/Shyp/waterline.git#62c43160986db5547ac56093ba30c3727364a429",
+      "version": "1.1.0",
+      "resolved": "git+https://github.com/Shyp/waterline.git#7e5421f31305581c4779540ca28c431c19130452",
       "dependencies": {
         "anchor": {
           "version": "0.10.2",
@@ -815,8 +815,8 @@
           "version": "0.11.1"
         },
         "waterline-schema": {
-          "version": "0.1.17",
-          "resolved": "git://github.com/Shyp/waterline-schema.git#2c228532f3d480b6dc2bfdd5911d10015abc515d"
+          "version": "0.2.0",
+          "resolved": "git://github.com/Shyp/waterline-schema.git#d1a33deea5fe67bff40934e962f4aff4d11b671a"
         }
       }
     }

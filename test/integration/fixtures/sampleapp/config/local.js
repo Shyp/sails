@@ -11,6 +11,6 @@ module.exports = {
     defaultLimit: 10
   },
   models: {
-    migrate: 'alter'
+    migrate: 'safe'
   }
 };
