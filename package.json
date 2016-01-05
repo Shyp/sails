@@ -31,7 +31,6 @@
     "captains-log": "0.11.11",
     "colors": "0.6.2",
     "commander": "2.1.0",
-    "connect-flash": "0.1.1",
     "debug": "2.2.0",
     "ejs": "0.8.8",
     "ejs-locals": "1.0.2",

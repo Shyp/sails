@@ -17,10 +17,6 @@ This hook's responsibilities are:
 + req.port
 + req._sails (access to the app's `sails` object in case it's not global)
 
-##### Flash Middleware
-+ req.flash('keyToGet')
-+ req.flash('keyToSet','valueToSetOnKey')
-
 ##### Set default view locals (i.e. `app.locals`)
 + `_` (lodash)
 + `session`
