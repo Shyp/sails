@@ -70,6 +70,7 @@
     "istanbul": "*",
     "microtime": "~0.6.0",
     "mocha": "2.3.4",
+    "npm": "2",
     "portfinder": "~0.2.1",
     "request": "*",
     "root-require": "~0.2.0",
