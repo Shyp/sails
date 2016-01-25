@@ -14,3 +14,6 @@ shrinkwrap:
 	npm install --production
 	npm shrinkwrap
 	clingwrap npmbegone
+
+clean:
+	rm -rf node_modules

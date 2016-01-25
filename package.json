@@ -59,7 +59,7 @@
     "sails-util": "^0.10.4",
     "semver": "~2.2.1",
     "skipper": "~0.5.3",
-    "waterline": "git+https://github.com/Shyp/waterline.git#v2.0.0"
+    "waterline": "git+https://github.com/Shyp/waterline.git#other-wl-error"
   },
   "devDependencies": {
     "benchmark": "~1.0.0",
