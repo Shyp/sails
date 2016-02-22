@@ -49,9 +49,9 @@ describe('router :: ', function() {
 						controller: 'test',
 						action: 'verb'
 					}
-				});				
+				});
 			});
-			
+
 			it('should respond to get requests', function(done) {
 
 
@@ -102,7 +102,7 @@ describe('router :: ', function() {
 						controller: 'test',
 						action: 'verb'
 					}
-				});				
+				});
 			});
 
 			it('should respond to get requests', function(done) {
@@ -178,7 +178,7 @@ describe('router :: ', function() {
 						controller: 'test',
 						action: 'verb'
 					}
-				});				
+				});
 			});
 
 			it('should respond to delete requests', function(done) {
@@ -188,36 +188,6 @@ describe('router :: ', function() {
 					if (err) done(new Error(err));
 
 					assert(response.body === 'delete', Err.badResponse(response));
-					done();
-				});
-			});
-		});
-
-		describe('with dynamic url paths specified', function() {
-
-			before(function() {
-				httpHelper.writeRoutes({
-					'get /test/:category/:size': {
-						controller: 'test',
-						action: 'dynamic'
-					}
-				});
-			});
-
-			it('should respond to requests that match the url pattern', function(done) {
-
-				httpHelper.testRoute('get', 'test/shirts/large', function(err, response) {
-					if (err) done(new Error(err));
-
-					var expected = JSON.stringify([{
-						'name': 'category',
-						'optional': false
-					}, {
-						'name': 'size',
-						'optional': false
-					}]);
-
-					assert(expected === JSON.stringify(JSON.parse(response.body)));
 					done();
 				});
 			});
@@ -241,7 +211,7 @@ describe('router :: ', function() {
 					assert(response.body === 'get', Err.badResponse(response));
 					done();
 				});
-			})
+			});
 		});
 
 		describe('should accept case-insensitive controller key', function() {
