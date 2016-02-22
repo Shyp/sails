@@ -366,13 +366,23 @@
       }
     },
     "sails-generate": {
-      "version": "0.11.6",
+      "version": "1.0.0",
+      "resolved": "git+https://github.com/Shyp/sails-generate.git#6275c419f1e0dde8f68f63357acfd0233f4d57c7",
       "dependencies": {
+        "async": {
+          "version": "0.7.0"
+        },
         "sails-generate-new": {
-          "version": "0.10.18"
+          "version": "0.10.18",
+          "dependencies": {
+            "async": {
+              "version": "0.2.10"
+            }
+          }
         },
         "sails-generate-backend": {
-          "version": "0.11.3"
+          "version": "1.0.0",
+          "resolved": "git://github.com/Shyp/sails-generate-backend.git#366f0002bc841259089eeb76768f4383529732bf"
         },
         "sails-generate-frontend": {
           "version": "0.10.20"
@@ -381,7 +391,12 @@
           "version": "0.10.10"
         },
         "sails-generate-api": {
-          "version": "0.10.0"
+          "version": "0.10.0",
+          "dependencies": {
+            "async": {
+              "version": "0.2.10"
+            }
+          }
         },
         "sails-generate-model": {
           "version": "0.10.9",
