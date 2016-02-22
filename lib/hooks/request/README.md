@@ -19,7 +19,6 @@ This hook's responsibilities are:
 
 ##### Set default view locals (i.e. `app.locals`)
 + `_` (lodash)
-+ `session`
 + `req`
 + `res`
 + `sails`

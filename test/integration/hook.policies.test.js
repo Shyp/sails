@@ -10,8 +10,6 @@ var path = require('path');
 var fs = require('fs');
 
 
-
-
 // These tests changed for Sails v0.10 because of the introduction
 // of the `findOne` blueprint action, and a change in how GET blueprint
 // routes map to actions (e.g. `GET /foo/3` now maps to `findOne()` instead
@@ -33,7 +31,7 @@ describe('router :: ', function() {
 
     beforeEach(function(done) {
       appHelper.lift({
-        verbose: false
+        verbose: false,
       }, function(err, sails) {
         if (err) {
           throw new Error(err);
