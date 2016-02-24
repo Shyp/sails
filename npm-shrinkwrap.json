@@ -799,8 +799,8 @@
       }
     },
     "waterline": {
-      "version": "3.3.0",
-      "resolved": "git+https://github.com/Shyp/waterline.git#9038c1227f4cb78691940a453165e74b9546ee53",
+      "version": "3.4.0",
+      "resolved": "git+https://github.com/Shyp/waterline.git#6c7f70243b3fa0bc53253ff785f335620f0d2efc",
       "dependencies": {
         "async": {
           "version": "0.9.0"
