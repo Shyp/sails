@@ -799,8 +799,8 @@
       }
     },
     "waterline": {
-      "version": "2.0.0",
-      "resolved": "git+https://github.com/Shyp/waterline.git#5ce7083fab5e5478f112cca168d9a2ad75796889",
+      "version": "3.2.0",
+      "resolved": "git+https://github.com/Shyp/waterline.git#0bc98df87356e5fab1f6c68edeb94b861596ee17",
       "dependencies": {
         "async": {
           "version": "0.9.0"
@@ -812,8 +812,8 @@
           "version": "0.1.7"
         },
         "lusitania": {
-          "version": "1.0.0",
-          "resolved": "git+https://github.com/Shyp/lusitania.git#38a3f194ae410b1ddcfebc854c000aa8e881b234",
+          "version": "2.2.0",
+          "resolved": "git+https://github.com/Shyp/lusitania.git#98ca16abd38c9b6b861b13667693c9058b41545c",
           "dependencies": {
             "validator": {
               "version": "3.22.2"
