@@ -1,7 +1,7 @@
 {
   "name": "sails",
   "author": "Shyp Engineering <engineering@shyp.com>",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "API-driven framework for building realtime apps, using MVC conventions (based on Express)",
   "homepage": "http://sailsjs.org",
   "keywords": [
