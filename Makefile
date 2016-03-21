@@ -3,12 +3,13 @@
 NODE_VERSION = v4.4.0
 
 circle-install:
-	curl -o https://raw.githubusercontent.com/Shyp/set-node-npm/master/set-node-npm
+	curl --remote-name https://raw.githubusercontent.com/Shyp/set-node-npm/master/set-node-npm
+	chmod +x set-node-npm
 	./set-node-npm
 
 test:
 	node --version
-	TZ=GMT mocha --bail --slow 2
+	TZ=GMT ./node_modules/.bin/mocha --bail --slow 2
 
 install:
 	npm --version
