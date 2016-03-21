@@ -1,7 +1,5 @@
 .PHONY: test install clean shrinkwrap
 
-NODE_VERSION = v4.4.0
-
 circle-install:
 	curl --remote-name https://raw.githubusercontent.com/Shyp/set-node-npm/master/set-node-npm
 	chmod +x set-node-npm
