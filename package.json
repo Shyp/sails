@@ -69,7 +69,6 @@
     "coffee-script": "1.7.1",
     "expect.js": "0.2.0",
     "istanbul": "*",
-    "microtime": "0.6.0",
     "mocha": "2.3.4",
     "npm": "2",
     "portfinder": "0.2.1",
