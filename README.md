@@ -14,6 +14,8 @@ we have removed support for many upstream features:
 - Sessions
 - CSRF
 - Multiple validation errors for a single request (only one error is returned)
+- Custom bootstrap in config/bootstrap.js
+- Sails no longer clobbers the SIGTERM, SIGUSR2, and SIGINT handlers.
 
 By limiting the feature set we hope to reduce the attack surface and ship
 something that's more reliable and predictable.
