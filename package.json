@@ -40,7 +40,6 @@
     "express-handlebars": "1.0.3",
     "fs-extra": "0.8.1",
     "glob": "3.2.11",
-    "i18n": "0.5.0",
     "include-all": "0.1.6",
     "lodash": "2.4.1",
     "lusitania": "git+https://github.com/Shyp/lusitania.git#v1.0.0",
