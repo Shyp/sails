@@ -37,7 +37,7 @@ describe('router :: ', function() {
           throw new Error(err);
         }
         sailsprocess = sails;
-        sailsprocess.once('hook:http:listening', done);
+        done()
       });
     });
 

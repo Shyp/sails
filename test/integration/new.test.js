@@ -46,11 +46,9 @@ describe('New app generator', function() {
 		it('should create new, liftable app in new folder', function(done) {
 			exec(sailsbin + ' new ' + appName, function(err) {
 				if (err) { return done(new Error(err)); }
-				appHelper.lift({log:{level:'silent'}}, function(err, sailsprocess) {					
+				appHelper.lift({log:{level:'silent'}}, function(err, sailsprocess) {
 					if (err) {return done(err);}
-					sailsprocess.once('hook:http:listening', function(){sailsprocess.kill(done);});
-					// sailsprocess.kill(done);
-					// setTimeout(done, function(){sailsprocess.kill(done)});
+					sailsprocess.kill(done);
 				});
 			});
 		});
@@ -76,7 +74,7 @@ describe('New app generator', function() {
 				if (err) { return done(new Error(err)); }
 				appHelper.lift({log:{level:'silent'}}, function(err, sailsprocess) {
 					if (err) {return done(err);}
-					sailsprocess.once('hook:http:listening', function(){sailsprocess.kill(done);});
+					sailsprocess.kill(done);
 				});
 			});
 		});

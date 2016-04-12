@@ -104,7 +104,10 @@ module.exports.lift = function(options, callback) {
 	Sails().lift(options, function(err, sails) {
 		if (err) return callback(err);
 		sails.kill = sails.lower;
-		return callback(null, sails);
+
+		sails.hooks.http.server.listen(sails.config.port, function() {
+		  return callback(null, sails);
+		});
 	});
 
 };
