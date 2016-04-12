@@ -16,7 +16,7 @@ describe('i18n ::', function() {
         throw new Error(err);
       }
       sailsprocess = sails;
-      sailsprocess.once('hook:http:listening', done);
+      done()
     });
   });
 
@@ -91,7 +91,7 @@ describe('i18n Config ::', function() {
         throw new Error(err);
       }
       sailsprocess = sails;
-      sailsprocess.once('hook:http:listening', done);
+      done()
     });
   });
 
