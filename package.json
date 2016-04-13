@@ -47,7 +47,6 @@
     "mime": "1.2.11",
     "mock-req": "0.1.0",
     "mock-res": "0.1.0",
-    "node-uuid": "1.4.3",
     "optimist": "0.6.1",
     "pluralize": "0.0.12",
     "rc": "0.5.5",

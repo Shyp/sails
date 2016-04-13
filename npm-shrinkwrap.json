@@ -389,9 +389,6 @@
     "mock-res": {
       "version": "0.1.0"
     },
-    "node-uuid": {
-      "version": "1.4.3"
-    },
     "optimist": {
       "version": "0.6.1",
       "dependencies": {
