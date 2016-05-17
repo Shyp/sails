@@ -57,7 +57,7 @@
     "sails-stringfile": "0.3.2",
     "sails-util": "0.10.4",
     "semver": "2.2.1",
-    "waterline": "git+https://github.com/Shyp/waterline.git#uuid-pk"
+    "waterline": "git+https://github.com/Shyp/waterline.git#add-uuid-pk-coercion"
   },
   "devDependencies": {
     "benchmark": "1.0.0",
