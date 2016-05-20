@@ -28,7 +28,6 @@ describe('App', function (){
               'moduleloader',
               'userconfig',
               'http',
-              'views'
             ]
           }, function onLoaded (err){
             if (err) return next(err);
@@ -68,7 +67,6 @@ describe('App', function (){
         'userconfig',
         'http',
         'session',
-        'views'
       ]
     }, done);
   });

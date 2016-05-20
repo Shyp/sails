@@ -21,7 +21,6 @@ describe('Views hook', function (){
         'moduleloader',
         'userconfig',
         'http',
-        'views'
       ]
     }, done);
   });
@@ -37,7 +36,6 @@ describe('Views hook', function (){
         'userconfig',
         'http',
         'session',
-        'views'
       ]
     }, done);
   });

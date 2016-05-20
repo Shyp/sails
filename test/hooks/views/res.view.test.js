@@ -23,7 +23,6 @@ describe('res.view()', function (){
         'moduleloader',
         'userconfig',
         'http',
-        'views'
       ]
     }, done);
   });
