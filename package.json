@@ -16,9 +16,6 @@
     "orm"
   ],
   "main": "./lib/index.js",
-  "bin": {
-    "sails": "./bin/sails.js"
-  },
   "scripts": {
     "test": "mocha -b",
     "prepublish": "npm prune"
