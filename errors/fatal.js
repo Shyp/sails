@@ -13,73 +13,6 @@ var log = require('captains-log')();
  */
 module.exports = {
 
-  // Lift-time and load-time errors
-  failedToLoadSails: function(err) {
-    log.error(err);
-    log.error('Could not load Sails.');
-    log.error('Are you using the latest stable version?');
-    _terminateProcess(1);
-  },
-
-  noPackageJSON: function() {
-    log.error('Cannot read package.json in the current directory (' + process.cwd() + ')');
-    log.error('Are you sure this is a Sails app?');
-    _terminateProcess(1);
-  },
-
-  notSailsApp: function() {
-    log.error('The package.json in the current directory does not list Sails as a dependency...');
-    log.error('Are you sure `' + process.cwd() + '` is a Sails app?');
-    _terminateProcess(1);
-  },
-
-  badLocalDependency: function(pathTo_localSails, requiredVersion) {
-    log.error(
-      'The local Sails dependency installed at `' + pathTo.localSails + '` ' +
-      'has a corrupted, missing, or un-parsable package.json file.'
-    );
-    log.error('You may consider running:');
-    log.error('rm -rf ' + pathTo_localSails + ' && npm install sails@' + app.dependencies.sails);
-    _terminateProcess(1);
-  },
-
-  // TODO: replace the inline version of this error
-  // app/loadHooks.js:42
-  malformedHook: function() {
-    log.error('Malformed hook! (' + id + ')');
-    log.error('Hooks should be a function with one argument (`sails`)');
-    _terminateProcess(1);
-  },
-
-  // TODO: replace the inline version of this error
-  // app/load.js:146
-  hooksTookTooLong: function() {
-    var hooksTookTooLongErr = 'Hooks are taking way too long to get ready...  ' +
-      'Something might be amiss.\nAre you using any custom hooks?\nIf so, make sure the hook\'s ' +
-      '`initialize()` method is triggering its callback.';
-    log.error(hooksTookTooLongErr);
-    process.exit(1);
-  },
-
-
-
-  // Invalid user module errors
-  invalidCustomResponse: function(responseIdentity) {
-    log.error('Cannot define custom response `' + responseIdentity + '`.');
-    log.error('`res.' + responseIdentity + '` has special meaning in Connect/Express/Sails.');
-    log.error('Please remove the `' + responseIdentity + '` file from the `responses` directory.');
-    _terminateProcess(1);
-  },
-
-  __UnknownPolicy__: function(policy, source, pathToPolicies) {
-    source = source || 'config.policies';
-
-    log.error('Unknown policy, "' + policy + '", referenced in `' + source + '`.');
-    log.error('Are you sure that policy exists?');
-    log.error('It would be located at: `' + pathToPolicies + '/' + policy + '.js`');
-    return _terminateProcess(1);
-  },
-
   __InvalidConnection__: function(connection, sourceModelId) {
     log.error('In model (' + sourceModelId + '), invalid connection ::', connection);
     log.error('Must contain an `adapter` key referencing the adapter to use.');
@@ -128,33 +61,6 @@ module.exports = {
     return _terminateProcess(1);
   }
 };
-
-
-
-/**
- *
- * TODO: Make all of this more elegant.
- * ========================================================
- * + Ideally we don't call `process.exit()` at all.
- * We should consistently use `sails.lower()` for unhandleable core
- * errors and just trigger the appropriate callback w/ an error for
- * core lift/load and any CLI errors.
- *
- * + Then we won't have to worry as much about dangling child processes
- * and things like that. Plus it's more testable that way.
- *
- * In practice, the best way to do this may be an error domain or an
- * event emitted on the sails object (or both!)
- * ========================================================
- *
- *
- *
- * TODO: Merge w/ app/teardown.js
- * ========================================================
- * (probably achievable by doing the aforementioned cleanup)
- * ========================================================
- */
-
 
 
 /**
