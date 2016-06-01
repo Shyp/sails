@@ -33,12 +33,6 @@ module.exports = {
   },
 
 
-  __ModelIsMissingConnection__: function(sourceModelId) {
-    log.error(nodeutil.format('One of your models (%s) doesn\'t have a connection.', sourceModelId));
-    log.error('Do you have a default `connection` in your `config/models.js` file?');
-    return _terminateProcess(1);
-  },
-
   __UnknownAdapter__: function(adapterId, sourceModelId, sailsMajorV, sailsMinorV) {
     log.error('Trying to use unknown adapter, "' + adapterId + '", in model `' + sourceModelId + '`.');
     log.error('Are you sure that adapter is installed in this Sails app?');
