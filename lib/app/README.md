@@ -35,10 +35,6 @@ The most important core implicit default configuration is the set of built-in ho
 
 Load hooks in the proper order.
 
-#### Populate Middleware Registry
-
-Grab `this.middleware` from each hook and make it available on the `sails` object as `sails.middleware.[HOOK_ID]`.
-
 #### Assemble Router
 
 Prepares the core Router, then emit multiple events on the `sails` object informing hooks that they can safely bind routes.
