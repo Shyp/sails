@@ -27,8 +27,6 @@ describe('App', function (){
             loadHooks: [
               'moduleloader',
               'userconfig',
-              'http',
-              'views'
             ]
           }, function onLoaded (err){
             if (err) return next(err);
@@ -66,9 +64,7 @@ describe('App', function (){
       loadHooks: [
         'moduleloader',
         'userconfig',
-        'http',
         'session',
-        'views'
       ]
     }, done);
   });
